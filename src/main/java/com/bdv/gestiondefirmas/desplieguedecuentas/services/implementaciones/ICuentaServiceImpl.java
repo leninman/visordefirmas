@@ -14,23 +14,12 @@ public class ICuentaServiceImpl implements ICuentaService {
     @Autowired
     CuentaRepository cuentaRepository;
 
-    @Override
-    public Iterable<Cuenta> findAll() {
-        return cuentaRepository.findAll();
-    }
 
     @Override
-    public Optional<Cuenta> findById(Long idCuenta) {
+    public Optional<Cuenta> findById(String idCuenta) {
         return cuentaRepository.findById(idCuenta);
     }
 
-    @Override
-    public Cuenta save(Cuenta cuenta) {
-        return cuentaRepository.save(cuenta);
-    }
 
-    @Override
-    public void deleteById(Long idCuenta) {
-        cuentaRepository.deleteById(idCuenta);
-    }
+
 }

@@ -6,11 +6,7 @@ import java.util.Optional;
 
 public interface ICuentaService {
 
-    public Iterable<Cuenta> findAll();
+    public Optional<Cuenta> findById(String idCuenta);
 
-    public Optional<Cuenta> findById(Long idCuenta);
 
-    public Cuenta save(Cuenta cuenta);
-
-    public void deleteById(Long idCuenta);
 }

@@ -1,0 +1,6 @@
+/* Populate tables */
+INSERT INTO CUENTAS (ID_Cuenta, ID_Sucursal, Nombre, ID_Titular, ID_Representante, ID_Tipo_Cuenta, Tipo_Cuenta, ID_Tipo_Titular, Tipo_Titular, Id_Tipo_Regla, Tipo_Regla, Status, Observacion, Fecha_Creacion, Fecha_Modificacion)VALUES('01010006237','101','EL PARAISO','J300518280','',1,'CORRIENTE',2,'JURIDICO',3,'FIRMAS CONJUNTAS',1,'CONJUNTAS INDISPENSABLE SELLO AMB DR. ARMANDO CASTILLO PLAZA','2002-11-13 18:51:25.263',null);
+INSERT INTO CUENTAS (ID_Cuenta, ID_Sucursal, Nombre, ID_Titular, ID_Representante, ID_Tipo_Cuenta, Tipo_Cuenta, ID_Tipo_Titular, Tipo_Titular, Id_Tipo_Regla, Tipo_Regla, Status, Observacion, Fecha_Creacion, Fecha_Modificacion)VALUES('04680219176','468','MARACAIBO 80','J7019595','',1,'CORRIENTE',2,'JURIDICO',2,'FIRMAS INDISTINTAS',0,'FIRMAS A INDISTINTAS FIRMAS B Y C CONJUNTAS','2017-01-18 15:26:22.587','2017-01-18 15:27:14.927');
+INSERT INTO CUENTAS (ID_Cuenta, ID_Sucursal, Nombre, ID_Titular, ID_Representante, ID_Tipo_Cuenta, Tipo_Cuenta, ID_Tipo_Titular, Tipo_Titular, Id_Tipo_Regla, Tipo_Regla, Status, Observacion, Fecha_Creacion, Fecha_Modificacion)VALUES('06340264781','634','SUC PUERTO ORDAZ','V25595006','',1,'CORRIENTE',1,'NATURAL',1,'FIRMAS UNICA',0,'','2017-01-26 13:51:04.840','2017-01-26 13:51:07.337');
+
+
