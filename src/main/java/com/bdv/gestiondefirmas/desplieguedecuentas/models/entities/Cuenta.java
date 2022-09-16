@@ -2,7 +2,7 @@ package com.bdv.gestiondefirmas.desplieguedecuentas.models.entities;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -15,21 +15,55 @@ public class Cuenta {
 
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="ID_CUENTA")
-    private Long idCuenta;
+    @Column(name="ID_Cuenta")
+    private String idCuenta;
 
-    @Column(name="NUMERO_CUENTA")
-    private String numeroCuenta;
+    @Column(name="ID_Sucursal")
+    private String idSucursal;
 
-    //AQUI VA EL RESTO DE LOS ATRIBUTOS
+    @Column(name="Nombre")
+    private String nombre;
 
-    @Column(name="created_at")
-    private LocalDate createdAt;
+    @Column(name="ID_Titular")
+    private String idTitular;
+
+    @Column(name="ID_Representante")
+    private String idRepresentante;
+
+    @Column(name="ID_Tipo_Cuenta")
+    private Integer idTipoCuenta;
+
+    @Column(name="Tipo_Cuenta")
+    private String tipoCuenta;
+
+    @Column(name="ID_Tipo_Titular")
+    private Integer idTipoTitular;
+
+    @Column(name="Tipo_Titular")
+    private String tipoTitular;
+
+    @Column(name="Id_Tipo_Regla")
+    private Integer idTipoRegla;
+
+    @Column(name="Tipo_Regla")
+    private String tipoRegla;
+
+    @Column(name="Status")
+    private Integer status;
+
+    @Column(name="Observacion")
+    private String observacion;
+
+    @Column(name="Fecha_Creacion")
+    private LocalDateTime fechaCreacion;
+
+    @Column(name="Fecha_Modificacion")
+    private LocalDateTime fechaModificacion;
+
 
     @PrePersist
     public void prePersist(){
-        this.createdAt= LocalDate.now();
+        this.fechaCreacion= LocalDateTime.now();
     }
 
 }

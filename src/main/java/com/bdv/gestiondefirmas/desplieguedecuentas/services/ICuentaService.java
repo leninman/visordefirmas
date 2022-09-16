@@ -2,15 +2,15 @@ package com.bdv.gestiondefirmas.desplieguedecuentas.services;
 
 import com.bdv.gestiondefirmas.desplieguedecuentas.models.entities.Cuenta;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface ICuentaService {
 
-    public Iterable<Cuenta> findAll();
+    public Optional<Cuenta> findById(String idCuenta);
 
-    public Optional<Cuenta> findById(Long idCuenta);
+    public List<Cuenta> listarcuentas();
 
-    public Cuenta save(Cuenta cuenta);
 
-    public void deleteById(Long idCuenta);
+
 }

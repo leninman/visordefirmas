@@ -16,6 +16,7 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -60,6 +61,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>desplieguedecuentas</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

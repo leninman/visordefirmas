@@ -6,6 +6,7 @@ import com.bdv.gestiondefirmas.desplieguedecuentas.services.ICuentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -14,23 +15,16 @@ public class ICuentaServiceImpl implements ICuentaService {
     @Autowired
     CuentaRepository cuentaRepository;
 
-    @Override
-    public Iterable<Cuenta> findAll() {
-        return cuentaRepository.findAll();
-    }
 
     @Override
-    public Optional<Cuenta> findById(Long idCuenta) {
+    public Optional<Cuenta> findById(String idCuenta) {
         return cuentaRepository.findById(idCuenta);
     }
 
     @Override
-    public Cuenta save(Cuenta cuenta) {
-        return cuentaRepository.save(cuenta);
+    public List<Cuenta> listarcuentas() {
+        return (List<Cuenta>) cuentaRepository.findAll();
     }
 
-    @Override
-    public void deleteById(Long idCuenta) {
-        cuentaRepository.deleteById(idCuenta);
-    }
+
 }
