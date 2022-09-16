@@ -15,9 +15,6 @@
 	<description>Microservicios de despliegue de cuentas,grafos,sellos y condiciones de movilización</description>
 	<properties>
 		<java.version>11</java.version>
-		
-			<maven.compiler.source>1.8</maven.compiler.source>
-			<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -64,6 +61,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>desplieguedecuentas</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

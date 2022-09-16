@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -15,6 +16,11 @@ public class CuentaController {
 
     @Autowired
     private ICuentaService cuentaService;
+
+    @GetMapping("/")
+    public ResponseEntity<List<Cuenta>> listarcuentas(){
+        return ResponseEntity.ok().body(cuentaService.listarcuentas());
+    }
 
     @GetMapping("getCuenta")
     public ResponseEntity<Cuenta>  ver(@RequestParam String idCuenta){
