@@ -9,7 +9,7 @@ public interface ICuentaService {
 
     public Optional<Cuenta> findById(String idCuenta);
 
-    public List<Cuenta> listarcuentas();
+
 
 
 
