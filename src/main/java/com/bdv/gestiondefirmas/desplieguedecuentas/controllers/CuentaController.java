@@ -17,10 +17,6 @@ public class CuentaController {
     @Autowired
     private ICuentaService cuentaService;
 
-    @GetMapping("/")
-    public ResponseEntity<List<Cuenta>> listarcuentas(){
-        return ResponseEntity.ok().body(cuentaService.listarcuentas());
-    }
 
     @GetMapping("getCuenta")
     public ResponseEntity<Cuenta>  ver(@RequestParam String idCuenta){

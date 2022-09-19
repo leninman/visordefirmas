@@ -21,10 +21,7 @@ public class ICuentaServiceImpl implements ICuentaService {
         return cuentaRepository.findById(idCuenta);
     }
 
-    @Override
-    public List<Cuenta> listarcuentas() {
-        return (List<Cuenta>) cuentaRepository.findAll();
-    }
+
 
 
 }
