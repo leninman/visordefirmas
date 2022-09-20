@@ -14,8 +14,8 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@Table(name="FIRMANTES")
-public class Firmante {
+@Table(name="PERSONAS")
+public class Persona {
     @Id
     @Column(name="ID_Persona")
     private String idPersona;
@@ -23,30 +23,7 @@ public class Firmante {
     @Column(name="Nombre")
     private String nombre;
 
-
-    @Column(name="ID_Cuenta")
-    @JsonIgnore
-    private String idCuenta;
-
     @Column(name="Direccion")
     private String direccion;
-
-
-    @Column(name="ID_Tipo")
-    private Integer idTipo;
-
-    @Column(name="Tipo")
-    private String tipo;
-
-    @Column(name="ID_Tipo_Imagen")
-    private Integer idTipoImagen;
-
-    @Column(name="Tipo_Imagen")
-    private String tipoImagen;
-
-
-    @Column(name="ID_Imagen")
-    private Long idImagen;
-
 
 }
