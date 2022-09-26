@@ -101,7 +101,7 @@ public class CuentaController {
     }
 
 
-    @GetMapping("getFirma")
+    @GetMapping("getImagenFirma")
     public ResponseEntity<?> verFirma(@RequestParam Long idImagen) {
         Optional<Firma> o = firmaService.findByIdImagen(idImagen);
         if (o.isEmpty()) {

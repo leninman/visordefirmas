@@ -15,10 +15,16 @@ public class ICuentaServiceImpl implements ICuentaService {
     @Autowired
     CuentaRepository cuentaRepository;
 
+    private final static String ACCION_SELECT_PRODUCTO="SELECT_PRODUCTO";
+
+    public ICuentaServiceImpl(CuentaRepository cuentaRepository) {
+    }
+
 
     @Override
     public Optional<Cuenta> findById(String idCuenta) {
-        return cuentaRepository.findById(idCuenta);
+        return cuentaRepository.findCuenta(idCuenta);
+        //return null;
     }
 
 

@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface ICuentaService {
 
-    public Optional<Cuenta> findById(String idCuenta);
+    Optional<Cuenta> findById(String idCuenta);
 
 
 
