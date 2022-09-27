@@ -64,7 +64,7 @@ public class CuentaController {
 
     @GetMapping("getSellos")
     public ResponseEntity<?> verSellos(@RequestParam String idCuenta) {
-        List<Optional<Sellos>> o = sellosService.findByIdCuenta(idCuenta);
+        List<Sellos> o = sellosService.findByIdCuenta(idCuenta);
         if (o.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
@@ -74,8 +74,8 @@ public class CuentaController {
 
     @GetMapping("getSello")
     public ResponseEntity<?> verSello(@RequestParam Long idImagen) {
-        Optional<Sello> o = selloService.findByIdImagen(idImagen);
-        if (o.isEmpty()) {
+        Sello o = selloService.findByIdImagen(idImagen);
+        if (o==null) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok().body(o);

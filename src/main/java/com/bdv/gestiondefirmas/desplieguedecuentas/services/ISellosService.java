@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface ISellosService {
 
-    List<Optional<Sellos>> findByIdCuenta(String idCuenta);
+    List<Sellos> findByIdCuenta(String idCuenta);
 
 
 

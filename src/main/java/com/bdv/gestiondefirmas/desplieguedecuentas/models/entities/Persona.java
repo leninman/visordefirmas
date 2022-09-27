@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
@@ -14,16 +15,14 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@Table(name="PERSONAS")
-public class Persona {
+public class Persona implements Serializable {
     @Id
-    @Column(name="ID_Persona")
     private String idPersona;
 
-    @Column(name="Nombre")
+
     private String nombre;
 
-    @Column(name="Direccion")
+
     private String direccion;
 
 }

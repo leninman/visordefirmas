@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.sql.Blob;
 
 @Data
@@ -12,31 +13,18 @@ import java.sql.Blob;
 @Getter
 @Setter
 @Entity
-@Table(name="SELLO")
-public class Sello {
+public class Sello implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
-    @Column(name="ID_Sello")
-    private Long idSello;
-
     @Column(name="ID_Tipo_Imagen")
     private Integer idTipoImagen;
-
-    @Column(name="ID_Imagen")
-    @JsonIgnore
-    private Long idImagen;
 
     @Column(name="Longitud")
     private Integer longitud;
 
     @Column(name="Imagen")
-    @Lob
-    private byte[] imagen;
+    private String imagen;
 
-    public Integer getImagenHashCode(){
-        return (this.imagen!=null) ? this.imagen.hashCode():null;
-    }
+
 
 }

@@ -3,6 +3,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
@@ -11,18 +12,9 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name="CONDICIONES")
-public class Condiciones {
+public class Condiciones implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonIgnore
-    @Column(name="ID_Condicion")
-    private Long idCondicion;
-
-    @Column(name="ID_Cuenta")
-    private String idCuenta;
-
     @Column(name="ID_Tipo1")
     private Integer idTipo1;
 

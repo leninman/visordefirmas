@@ -10,6 +10,10 @@ import java.util.Optional;
 
 public interface SelloRepository extends CrudRepository<Sello,Long> {
 
-    @Query(value="Select * from SELLO u where u.ID_IMAGEN=?1",nativeQuery = true)
-    Optional<Sello> finByIdImagen(Long idImagen);
+    @Query(value="Select a.ID_TipoImagen as ID_Tipo_Imagen," +
+            "null as Longitud," +
+            "a.Imagen " +
+            "from Imagen a " +
+            "where a.ID_Imagen=?1",nativeQuery = true)
+    Sello finByIdImagen(Long idImagen);
 }

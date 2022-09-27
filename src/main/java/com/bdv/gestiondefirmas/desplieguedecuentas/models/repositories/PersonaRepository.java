@@ -10,6 +10,9 @@ import java.util.Optional;
 
 public interface PersonaRepository extends CrudRepository<Persona,String> {
 
-    @Query(value="Select * from PERSONAS u where u.ID_PERSONA=?1",nativeQuery = true)
+    @Query(value="Select p.ID_Persona as ID_PERSONA," +
+            "p.Nombre as NOMBRE," +
+            "p.Direccion AS DIRECCION" +
+            " from Persona p where p.ID_Persona=?1",nativeQuery = true)
     Optional<Persona> findByIdPersona(String idPersona);
 }

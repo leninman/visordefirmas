@@ -20,7 +20,7 @@ public class ISellosServiceImpl implements ISellosService {
 
 
     @Override
-    public List<Optional<Sellos>> findByIdCuenta(String idCuenta) {
+    public List<Sellos> findByIdCuenta(String idCuenta) {
         return sellosRepository.finByIdCuenta(idCuenta);
     }
 

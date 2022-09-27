@@ -11,7 +11,11 @@ import java.util.Optional;
 
 public interface FirmaRepository extends CrudRepository<Firma,Long> {
 
-    @Query(value="Select a.ID_TipoImagen as ID_Tipo_Imagen,null as Longitud,a.Imagen from Imagen a where a.ID_Imagen=?1",nativeQuery = true)
+    @Query(value="Select a.ID_TipoImagen as ID_Tipo_Imagen," +
+            "null as Longitud," +
+            "a.Imagen " +
+            "from Imagen a " +
+            "where a.ID_Imagen=?1",nativeQuery = true)
     Firma getFirma(Long idImagen);
 
 

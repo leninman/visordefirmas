@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.awt.*;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
@@ -13,7 +14,7 @@ import java.awt.*;
 @Setter
 @Entity
 
-public class Firma {
+public class Firma implements Serializable {
 
     @Id
     @Column(name="ID_Tipo_Imagen")

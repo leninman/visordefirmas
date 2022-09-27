@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface ISelloService {
 
-    Optional<Sello> findByIdImagen(Long idImagen);
+    Sello findByIdImagen(Long idImagen);
 
 
 

@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Data
 @AllArgsConstructor
@@ -14,7 +15,7 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-public class Firmante {
+public class Firmante implements Serializable {
     @Id
     @Column(name="ID_Persona")
     private String idPersona;

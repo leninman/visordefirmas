@@ -2,6 +2,7 @@ package com.bdv.gestiondefirmas.desplieguedecuentas.models.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Data
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-public class Telefono {
+public class Telefono implements Serializable {
 
 
    @Id
