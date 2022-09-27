@@ -14,7 +14,6 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
-@Table(name="FIRMANTES")
 public class Firmante {
     @Id
     @Column(name="ID_Persona")
@@ -23,10 +22,6 @@ public class Firmante {
     @Column(name="Nombre")
     private String nombre;
 
-
-    @Column(name="ID_Cuenta")
-    @JsonIgnore
-    private String idCuenta;
 
     @Column(name="Direccion")
     private String direccion;

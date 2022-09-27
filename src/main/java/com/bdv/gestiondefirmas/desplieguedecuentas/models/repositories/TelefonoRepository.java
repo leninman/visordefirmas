@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface TelefonoRepository extends CrudRepository<Telefono,Long> {
-    @Query(value="Select NUMERO from TELEFONOS u where u.ID_PERSONA=?1",nativeQuery = true)
+    @Query(value="SELECT Telefono " +
+            "FROM Telefono " +
+            "WHERE ID_Persona =?1 ",nativeQuery = true)
     Optional<Telefono> finByIdPersona(String idPersona);
 }

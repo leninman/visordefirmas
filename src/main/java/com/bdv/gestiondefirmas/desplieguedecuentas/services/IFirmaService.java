@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface IFirmaService {
 
-    Optional<Firma> findByIdImagen(Long idImagen);
+    Firma findByIdImagen(Long idImagen);
 
 
 
