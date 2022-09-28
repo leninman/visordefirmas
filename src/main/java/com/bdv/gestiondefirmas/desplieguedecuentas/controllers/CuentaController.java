@@ -83,7 +83,7 @@ public class CuentaController {
 
     @GetMapping("getCondiciones")
     public ResponseEntity<?> verCondiciones(@RequestParam String idCuenta) {
-        Optional<Condiciones> o = condicionesService.findByIdCuenta(idCuenta);
+        List<Optional<Condiciones>> o = condicionesService.findByIdCuenta(idCuenta);
         if (o.isEmpty()) {
             return ResponseEntity.notFound().build();
         }

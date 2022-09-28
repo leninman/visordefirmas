@@ -6,6 +6,7 @@ import com.bdv.gestiondefirmas.desplieguedecuentas.models.entities.Sello;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface CondicionesRepository extends CrudRepository<Condiciones,Long> {
@@ -21,6 +22,6 @@ public interface CondicionesRepository extends CrudRepository<Condiciones,Long> 
             "JOIN Tipo AS TipoX ON Combinacion.ID_Tipo2 = TipoX.ID_Tipo " +
             "WHERE " +
             "ID_Cuenta=?1",nativeQuery = true)
-    Optional<Condiciones> findByIdCuenta(String idCuenta);
+    List<Optional<Condiciones>> findByIdCuenta(String idCuenta);
 
 }

@@ -9,6 +9,7 @@ import com.bdv.gestiondefirmas.desplieguedecuentas.services.ICuentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,7 +20,7 @@ public class ICondicionesServiceImpl implements ICondicionesService {
 
 
     @Override
-    public Optional<Condiciones> findByIdCuenta(String idCuenta) {
+    public List<Optional<Condiciones>> findByIdCuenta(String idCuenta) {
         return condicionesRepository.findByIdCuenta(idCuenta);
     }
 }

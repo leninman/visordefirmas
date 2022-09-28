@@ -8,10 +8,10 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bdv.gestiondefirmas</groupId>
-	<artifactId>desplieguedecuentas</artifactId>
+	<groupId>com.bdv.Msvc-visordefirmas</groupId>
+	<artifactId>Msvc-visordefirmas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>desplieguedecuentas</name>
+	<name>Msvc-visordefirmas</name>
 	<description>Microservicios de despliegue de cuentas,grafos,sellos y condiciones de movilización</description>
 	<properties>
 		<java.version>11</java.version>
@@ -56,7 +56,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Msvc-visordefirmas</finalName>
+		<finalName>Msvc-visordefirmas-V1.0</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
