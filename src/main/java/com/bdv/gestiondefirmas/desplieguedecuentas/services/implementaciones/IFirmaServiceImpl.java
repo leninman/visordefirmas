@@ -9,6 +9,7 @@ import com.bdv.gestiondefirmas.desplieguedecuentas.services.ISelloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +24,7 @@ public class IFirmaServiceImpl implements IFirmaService {
 
 
     @Override
+    @Transactional(readOnly=true)
     public Firma findByIdImagen(Long idImagen) {
 
         Firma firma=new Firma();

@@ -8,6 +8,7 @@ import com.bdv.gestiondefirmas.desplieguedecuentas.services.ICondicionesService;
 import com.bdv.gestiondefirmas.desplieguedecuentas.services.ICuentaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,6 +21,7 @@ public class ICondicionesServiceImpl implements ICondicionesService {
 
 
     @Override
+    @Transactional(readOnly=true)
     public List<Optional<Condiciones>> findByIdCuenta(String idCuenta) {
         return condicionesRepository.findByIdCuenta(idCuenta);
     }

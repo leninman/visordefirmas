@@ -8,6 +8,7 @@ import com.bdv.gestiondefirmas.desplieguedecuentas.services.IFirmanteService;
 import com.bdv.gestiondefirmas.desplieguedecuentas.services.IPersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,7 @@ public class IPersonaServiceImpl implements IPersonaService {
 
 
     @Override
+    @Transactional(readOnly=true)
     public Optional<Persona> findByIdPersona(String idPersona) {
         return personaRepository.findByIdPersona(idPersona);
     }
