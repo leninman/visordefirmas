@@ -57,12 +57,12 @@ public class CuentaController {
     }
 
     @GetMapping("getTelefonos")
-    public ResponseEntity<Telefono> verTelefonos(@RequestParam String idPersona) {
-        Optional<Telefono> o = telefonoService.findByIdPersona(idPersona);
+    public ResponseEntity<?> verTelefonos(@RequestParam String idPersona) {
+        List<Telefono> o = telefonoService.findByIdPersona(idPersona);
         if (o.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(o.get());
+        return ResponseEntity.ok().body(o);
     }
 
     @GetMapping("getSellos")

@@ -12,5 +12,5 @@ public interface TelefonoRepository extends CrudRepository<Telefono,Long> {
     @Query(value="SELECT Telefono " +
             "FROM Telefono " +
             "WHERE ID_Persona =?1 ",nativeQuery = true)
-    Optional<Telefono> finByIdPersona(String idPersona);
+    List<Telefono> finByIdPersona(String idPersona);
 }

@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface ITelefonoService {
 
-    public Optional<Telefono> findByIdPersona(String idPersona);
+    public List<Telefono> findByIdPersona(String idPersona);
 
 
 
