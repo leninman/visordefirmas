@@ -3,13 +3,22 @@ package com.bdv.gestiondefirmas.desplieguedecuentas.models.repositories;
 import com.bdv.gestiondefirmas.desplieguedecuentas.models.entities.Cuenta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
+import java.util.Map;
 import java.util.Optional;
 
 public interface CuentaRepository extends JpaRepository<Cuenta,Long> {
+
+
+   /* @Procedure
+    Optional<Map<String,Object>> sp_VISOR(@Param("Accion") String Accion,
+                                @Param("sProducto") String sProducto,
+                                @Param("sPersonaId") String sPersonaId
+    );*/
 
     @Query(value="SELECT  DISTINCT " +
             "a.ID_Cuenta," +

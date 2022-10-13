@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -46,7 +47,9 @@ public class CuentaController {
 
     @GetMapping("getCuenta")
     public ResponseEntity<Cuenta> verCuenta(@RequestParam String idCuenta) {
-        Optional<Cuenta> o = cuentaService.findById(idCuenta);
+   // public ResponseEntity<Map<String,Object>> verCuenta(@RequestParam String idCuenta) {
+     //   Optional<Map<String,Object>> o=cuentaService.findById(idCuenta);
+       Optional<Cuenta> o = cuentaService.findById(idCuenta);
         if (o.isEmpty()) {
             return ResponseEntity.notFound().build();
         }

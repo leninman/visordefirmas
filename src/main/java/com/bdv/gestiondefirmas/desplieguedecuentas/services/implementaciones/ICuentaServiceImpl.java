@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -25,8 +26,13 @@ public class ICuentaServiceImpl implements ICuentaService {
     @Override
     @Transactional(readOnly=true)
     public Optional<Cuenta> findById(String idCuenta) {
-        return cuentaRepository.findCuenta(idCuenta);
-        //return null;
+    //public Optional<Map<String,Object>> findById(String idCuenta) {
+
+       // String sProducto=idCuenta;
+
+       //  Optional<Map<String,Object>> mapa=cuentaRepository.sp_VISOR("SELECT_PRODUCTO",sProducto,"");
+       return cuentaRepository.findCuenta(idCuenta);
+     //   return mapa;
     }
 
 
