@@ -14,7 +14,7 @@
 	<name>Msvc-visordefirmas</name>
 	<description>Microservicios de despliegue de cuentas,grafos,sellos y condiciones de movilización</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
@@ -41,6 +41,7 @@
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
+			<!--<version>6.4.0.jre7</version>-->
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -56,7 +57,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Msvc-visordefirmas-V1.0</finalName>
+		<finalName>msvcvisordefirmas-r1-bdv</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
