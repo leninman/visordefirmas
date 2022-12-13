@@ -57,7 +57,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>msvcvisordefirmas</finalName>
+		<finalName>msvcvisordefirmas-r1-bdv</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
