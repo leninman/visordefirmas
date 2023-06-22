@@ -64,7 +64,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>msvcvisordefirmas-r2-bdv</finalName>
+		<finalName>msvcvisordefirmas</finalName>
 		<plugins>
 			<plugin>
 			<groupId>com.github.ulisesbocchio</groupId>
