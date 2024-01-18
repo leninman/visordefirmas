@@ -46,14 +46,14 @@ public class CuentaController {
 
 
     @GetMapping("getCuenta")
-    public ResponseEntity<Cuenta> verCuenta(@RequestParam String idCuenta) {
-   // public ResponseEntity<Map<String,Object>> verCuenta(@RequestParam String idCuenta) {
-     //   Optional<Map<String,Object>> o=cuentaService.findById(idCuenta);
-       Optional<Cuenta> o = cuentaService.findById(idCuenta);
+    //public ResponseEntity<Cuenta> verCuenta(@RequestParam String idCuenta) {
+    public ResponseEntity<Optional<Cuenta>> verCuenta(@RequestParam String idCuenta) {
+        Optional<Cuenta> o=cuentaService.findById(idCuenta);
+       //Optional<Cuenta> o = cuentaService.findById(idCuenta);
         if (o.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(o.get());
+        return ResponseEntity.ok(o);
     }
 
     @GetMapping("getTelefonos")

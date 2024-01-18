@@ -10,8 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CondicionesRepository extends CrudRepository<Condiciones,Long> {
-
-    @Query(value="SELECT Combinacion.ID_Tipo1," +
+    @Query(value = "{call sp_VISOR(:Accion,:sProducto,:sPersonaId)}",nativeQuery = true)
+    List<Optional<Condiciones>> findByIdCuenta(String Accion,String sProducto,String sPersonaId);
+    /*@Query(value="SELECT Combinacion.ID_Tipo1," +
             "TipoJ.Tipo as Tipo1," +
             "Combinacion.ID_Tipo2," +
             "TipoX.Tipo as Tipo2," +
@@ -22,6 +23,6 @@ public interface CondicionesRepository extends CrudRepository<Condiciones,Long> 
             "JOIN Tipo AS TipoX ON Combinacion.ID_Tipo2 = TipoX.ID_Tipo " +
             "WHERE " +
             "ID_Cuenta=?1",nativeQuery = true)
-    List<Optional<Condiciones>> findByIdCuenta(String idCuenta);
+    List<Optional<Condiciones>> findByIdCuenta(String idCuenta);*/
 
 }

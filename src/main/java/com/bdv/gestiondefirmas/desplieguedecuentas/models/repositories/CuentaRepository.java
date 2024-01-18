@@ -13,14 +13,15 @@ import java.util.Optional;
 
 public interface CuentaRepository extends JpaRepository<Cuenta,Long> {
 
+    @Query(value = "{call sp_VISOR(:Accion,:sProducto,:sPersonaId)}",nativeQuery = true)
+    Optional<Cuenta> spVISOR(String Accion,String sProducto,String sPersonaId);
 
-   /* @Procedure
-    Optional<Map<String,Object>> sp_VISOR(@Param("Accion") String Accion,
-                                @Param("sProducto") String sProducto,
-                                @Param("sPersonaId") String sPersonaId
-    );*/
 
-    @Query(value="SELECT  DISTINCT " +
+    //@Procedure
+    //Map<String,Object> sp_VISOR(@Param("Accion") String Accion,@Param("sProducto") String sProducto,@Param("sPersonaId") String sPersonaId);
+
+
+    /*@Query(value="SELECT  DISTINCT " +
             "a.ID_Cuenta," +
             "a.ID_Sucursal," +
             "f.Nombre," +
@@ -47,7 +48,7 @@ public interface CuentaRepository extends JpaRepository<Cuenta,Long> {
             "a.ID_TipoRegla=e.ID_TipoRegla AND " +
             "a.ID_Sucursal=f.ID_Sucursal AND " +
             "a.ID_Cuenta=?1",nativeQuery = true)
-    Optional<Cuenta> findCuenta(String idCuenta);
+    Optional<Cuenta> findCuenta(String idCuenta);*/
 
     //Query(value="{call sp_VISOR(:AccionIn,:idCuentaIn)}",nativeQuery = true)
    //Optional<Cuenta> findCuenta(@Param("AccionIn") String AccionIn, @Param("idCuentaIn") String idCuentaIn);

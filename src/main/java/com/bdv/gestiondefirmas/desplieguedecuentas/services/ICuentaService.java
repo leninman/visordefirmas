@@ -8,9 +8,9 @@ import java.util.Optional;
 
 public interface ICuentaService {
 
-    Optional<Cuenta> findById(String idCuenta);
+   // Optional<Cuenta> findById(String idCuenta);
 
-   // Optional<Map<String,Object>> findById(String idCuenta);
+    Optional<Cuenta> findById(String idCuenta);
 
 
 

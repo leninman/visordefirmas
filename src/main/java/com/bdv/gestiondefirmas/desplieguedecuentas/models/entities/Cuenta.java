@@ -55,21 +55,21 @@ public class Cuenta implements Serializable {
     private String idRepresentante;
 
 
-    private Integer idTipoCuenta;
+    private Integer id_tipocuenta;
 
 
-    private String tipoCuenta;
+    private String tipocuenta;
 
 
-    private Integer idTipoTitular;
+    private Integer id_tipotitular;
 
-    private String tipoTitular;
-
-
-    private Integer idTipoRegla;
+    private String tipotitular;
 
 
-    private String tipoRegla;
+    private Integer id_tiporegla;
+
+
+    private String tiporegla;
 
 
     private Integer status;

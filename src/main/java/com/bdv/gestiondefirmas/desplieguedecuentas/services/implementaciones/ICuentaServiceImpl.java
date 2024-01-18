@@ -25,14 +25,14 @@ public class ICuentaServiceImpl implements ICuentaService {
 
     @Override
     @Transactional(readOnly=true)
+    //public Optional<Cuenta> findById(String idCuenta) {
     public Optional<Cuenta> findById(String idCuenta) {
-    //public Optional<Map<String,Object>> findById(String idCuenta) {
 
-       // String sProducto=idCuenta;
+        String sProducto=idCuenta;
 
-       //  Optional<Map<String,Object>> mapa=cuentaRepository.sp_VISOR("SELECT_PRODUCTO",sProducto,"");
-       return cuentaRepository.findCuenta(idCuenta);
-     //   return mapa;
+        return  cuentaRepository.spVISOR("SELECT_PRODUCTO",sProducto,"");
+     //  return cuentaRepository.findCuenta(idCuenta);
+
     }
 
 

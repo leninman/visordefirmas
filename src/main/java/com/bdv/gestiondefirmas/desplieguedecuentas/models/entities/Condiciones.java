@@ -13,21 +13,25 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 public class Condiciones implements Serializable {
+  //  @Id
+  //  @GeneratedValue(strategy = GenerationType.IDENTITY)
+ //   @Column(name = "id", nullable = false)
+ //   private Long id;
 
     @Id
-    @Column(name="ID_Tipo1")
-    private Integer idTipo1;
+    //@Column(name="ID_Tipo1")
+    private Integer id_tipo1;
 
-    @Column(name="Tipo1")
-    private String Tipo1;
+   // @Column(name="Tipo1")
+    private String tipo;
 
-    @Column(name="ID_Tipo2")
-    private Integer idTipo2;
+   // @Column(name="ID_Tipo2")
+    private Integer id_tipo2;
 
-    @Column(name="Tipo2")
-    private String Tipo2;
+  //  @Column(name="Tipo2")
+   // private String tipo2;
 
-    @Column(name="Monto")
+   // @Column(name="Monto")
     private Double monto;
 
 
